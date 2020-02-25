@@ -9,6 +9,7 @@
     "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "heroku": "^7.38.2",
     "locus": "^2.0.4",
     "method-override": "^3.0.0",
     "moment": "^2.24.0",
@@ -24,7 +25,8 @@
     "ejs": "^3.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "lyy",
   "license": "ISC"
