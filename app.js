@@ -14,13 +14,12 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 var flash = require("connect-flash");
 
-// mongoose.connect("mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority")
 
 
 // seedDB();
 
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
-mongoose.connect(url);
+
 // const databaseUri = process.env.MONGODB_URI || "mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority";
 /*
 mongoose.connect(databaseUri, { useMongoClient: true })
