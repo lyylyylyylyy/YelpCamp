@@ -14,13 +14,17 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 var flash = require("connect-flash");
 
-mongoose.connect("mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority")
+// mongoose.connect("mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority")
 
 
 // seedDB();
 
 
+const databaseUri = process.env.MONGODB_URI || "mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority";
 
+mongoose.connect(databaseUri, { useMongoClient: true })
+    .then(() => console.log(`Database connected`))
+    .catch(err => console.log(`Database connection error: ${err.message}`));
 
 //  mongoose.connect("mongodb://localhost:27017/yelp_camp")
 
