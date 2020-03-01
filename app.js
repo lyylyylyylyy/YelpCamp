@@ -14,8 +14,7 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 var flash = require("connect-flash");
 
-// mongoose.connect("mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority")
-mongoose.connect(process.env.DATABASEURL)
+mongoose.connect("mongodb+srv://lyy:lyy@yelpcamp-itfym.mongodb.net/test?retryWrites=true&w=majority")
 
 // seedDB();
 
@@ -82,7 +81,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 
-app.listen(5000, function(){
+app.listen(process.env.PORT || 5000, function(){
 
     console.log("The YelpCamp Server Has Started!");
 });
